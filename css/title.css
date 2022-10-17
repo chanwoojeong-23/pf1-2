@@ -1,0 +1,68 @@
+div#title{
+    height: 500px; 
+    width: 1440px;
+    margin: 0 auto;
+    border-top: transparent;
+    font-family: 'Noto Sans KR', sans-serif;
+    padding-top: 100px;
+    padding-left: 100px;
+    box-sizing: border-box;
+  }
+div#title img{
+    
+    position: absolute;
+    position: relative;
+    right: -1146px;
+    top: 384px;
+    width: 350px;
+    height: 300px;
+}
+div#title h2{
+    font-size: 26px;
+}
+div#title h2 +p{ /* + 인접선택자,형제선택자 h2다음에 오는 p */
+    font-size: 50px;
+    line-height: 3;
+}
+div#title h2 + p + p{
+    font-size: 16px;
+    margin-bottom: 40px;   
+}
+div#title a{ /* 인라인태그에는 padding(크기에 영향)이 정확히 적용되지 않는다.display:block로 전환 */
+    border: 1px solid;
+    padding: 20px 25px;
+    margin-top: 30px;
+    display: block;
+    width: 230px;
+    text-align: center;
+    transition: all 0.5s;
+    background-color: #bbb;
+}
+div#title a::after{
+    content: "";
+    border: 2px solid #000;
+    border-bottom-color: rgb(0, 0, 0);
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    border-left-color: rgb(0, 0, 0);
+    border-left-style: solid;
+    border-left-width: 2px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-left: 230px;
+    border-left: transparent;
+    border-bottom: transparent;
+    transform: rotate(45deg);
+    position: absolute;
+    position: relative;
+    top: -15px;
+}
+div#title a:hover{
+    background-color: #000;
+    color: #fff;
+  
+    opacity: 0.3;
+}
+
+    
